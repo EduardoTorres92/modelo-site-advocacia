@@ -1,0 +1,21 @@
+# Site estático: publica a pasta site/, sem etapa de build.
+[build]
+  publish = "site"
+
+# Funções (consulta de processos) ficam FORA da pasta publicada
+[functions]
+  directory = "netlify/functions"
+
+# Imagens e quadros do vídeo: cache de 7 dias (se trocar uma foto mantendo o nome, some em até 7 dias).
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+# HTML, CSS e JS sempre conferem a versão nova.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"

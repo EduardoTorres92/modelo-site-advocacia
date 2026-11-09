@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="pt-BR" data-type="service" data-radius="soft" data-buttons="solid" data-motion>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vieira Lacerda Advocacia: advogados no Centro de Sorocaba</title>
+<meta name="description" content="Sociedade de advogados em Sorocaba com atendimento em família, trabalho, contratos, consumidor, previdência e empresas, presencial ou por vídeo.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Vieira Lacerda Advocacia, Sorocaba">
+<meta property="og:description" content="Família, trabalho, contratos, consumidor, previdência e empresas. Atendimento presencial ou por vídeo.">
+<meta property="og:image" content="share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#f4efe8">
+<!-- <link rel="canonical" href="https://[domínio do cliente]/"> -->
+<meta name="site-kind" content="other">
+<meta name="page-type" content="service">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400..600;1,8..60,400&family=Libre+Franklin:wght@400..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/system.css">
+<link rel="stylesheet" href="assets/ui/cards.css">
+<link rel="stylesheet" href="assets/motion/motion.css">
+<link rel="stylesheet" href="assets/layout/layout.css">
+<style>
+:root {
+  --p-bg: #f4efe8; --p-surface: #ebe3d8; --p-ink: #2b1a22; --p-muted: #6b5c61;
+  --p-accent: #6a1a48; --p-accent-ink: #f4efe8; --p-action: #6a1a48; --p-action-ink: #f4efe8;
+  --p-inv-bg: #2b1a22; --p-inv-surface: #37262e; --p-inv-ink: #f4efe8; --p-inv-muted: #b9aeb2;
+  --p-inv-accent: #f4efe8; --p-inv-accent-ink: #2b1a22; --p-inv-action: #f4efe8; --p-inv-action-ink: #2b1a22;
+  --font-display: "Source Serif 4", Georgia, serif;
+  --font-text: "Libre Franklin", system-ui, sans-serif;
+  --display-weight: 400;
+  --display-tracking: -0.02em;
+  --display-tracking-xl: -0.026em;
+}
+</style>
+<script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
+<script>document.documentElement.classList.add('mo-js');setTimeout(()=>document.documentElement.classList.add('mo-safe'),2500)</script>
+<link rel="modulepreload" href="assets/moments/moments.js">
+<link rel="modulepreload" href="assets/moments/lib.js">
+<link rel="modulepreload" href="assets/moments/pinned-chapters/moment.js">
+<style>
+  /* ── O que o navegador desenha sozinho, na cor da marca ── */
+  ::selection { background: color-mix(in srgb, var(--accent) 22%, transparent); color: var(--ink); }
+  .ground-inverse ::selection { background: color-mix(in srgb, var(--p-inv-ink) 28%, transparent); color: var(--p-inv-ink); }
+  input, textarea, select { caret-color: var(--accent); accent-color: var(--accent); }
+  html { scrollbar-color: color-mix(in srgb, var(--ink) 35%, transparent) transparent; }
+  a { text-underline-offset: 0.22em; }
+  time, .rows__value { font-variant-numeric: tabular-nums; }
+
+  /* ── Seções do tamanho do conteúdo (o ritmo vem do espaçamento, não da altura da tela) ── */
+  main > .section, footer.closing { height: auto; min-height: 0; padding-block: clamp(72px, 8vw, 120px); }
+  main > .section + .section:not(.ground-inverse) { padding-top: clamp(24px, 3vw, 48px); }
+  main > #atendimento.is-live { padding-top: 0; }
+  main > #areas { padding-bottom: var(--s-6); }
+  .section-head { max-width: 46rem; }
+  .section-head p { font-size: var(--t-lead); line-height: 1.55; }
+
+  /* ── Marca ── */
+  .nav__logo { white-space: nowrap; }
+  .nav__logo .brasao { width: 22px; height: 26px; flex: none; color: var(--accent); }
+  .footer--dark .nav__logo .brasao { color: currentColor; }
+
+  /* ── Abertura com vídeo (emil-design-eng: ease-out forte, só transform/opacity/filter, blur curto nas trocas) ── */
+  :root { --ease-out: cubic-bezier(0.23, 1, 0.32, 1); --papel: #f4efe8; --noite: #150510; }
+  main > section.abertura { position: relative; height: 300vh; min-height: 0; max-height: none; padding: 0; background: var(--noite); }
+  .abertura__palco { position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden; }
+  .abertura__canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+  .abertura__sombra { position: absolute; inset: 0; pointer-events: none;
+    background: linear-gradient(to top, rgb(21 5 16 / 0.86) 0%, rgb(21 5 16 / 0.55) 34%, rgb(21 5 16 / 0) 62%),
+                linear-gradient(to right, rgb(21 5 16 / 0.45), rgb(21 5 16 / 0) 55%); }
+  .abertura__texto { position: absolute; left: 0; right: 0; bottom: clamp(40px, 8vh, 88px); margin-inline: auto; color: var(--papel); }
+  .abertura__momento { position: absolute; left: 0; bottom: 0; max-width: 62rem;
+    opacity: 0; transform: translateY(12px); filter: blur(4px); pointer-events: none;
+    transition: opacity 400ms var(--ease-out), transform 400ms var(--ease-out), filter 400ms var(--ease-out); }
+  .abertura__momento.is-on { opacity: 1; transform: none; filter: none; pointer-events: auto; }
+  .abertura h1 { font-family: var(--font-display); font-weight: 400; font-size: clamp(42px, 5.6vw, 84px); line-height: 1.02; letter-spacing: -0.025em; margin: 0 0 var(--s-5); color: var(--papel); }
+  .abertura h1 .linha { display: inline-block; }
+  .abertura__lead { font-size: clamp(17px, 1.35vw, 20px); line-height: 1.55; color: rgb(244 239 232 / 0.86); max-width: 34rem; margin: 0 0 var(--s-6); }
+  .abertura__frase { font-family: var(--font-display); font-size: clamp(30px, 3.4vw, 52px); line-height: 1.12; letter-spacing: -0.015em; margin: 0; color: var(--papel); text-wrap: balance; }
+  .abertura .btn--secondary { color: var(--papel); background: transparent; border-color: rgb(244 239 232 / 0.45); }
+  @media (hover: hover) and (pointer: fine) { .abertura .btn--secondary:hover { border-color: var(--papel); } }
+  .abertura__papel { position: absolute; inset: 0; background: var(--papel); opacity: 0; pointer-events: none; }
+  .abertura__dica { position: absolute; right: var(--gutter, 24px); bottom: clamp(56px, 10vh, 112px); display: grid; justify-items: center; gap: 8px;
+    font-size: 12px; letter-spacing: 0.08em; color: rgb(244 239 232 / 0.7); transition: opacity 300ms var(--ease-out); }
+  .abertura__dica span { width: 1px; height: 36px; background: linear-gradient(rgb(244 239 232 / 0.8), transparent); transform-origin: top; animation: dica 2.2s var(--ease-out) infinite; }
+  @keyframes dica { 0% { transform: scaleY(0); } 60%, 100% { transform: scaleY(1); opacity: 0; } }
+  .abertura.andou .abertura__dica { opacity: 0; }
+  /* entrada no carregamento: sobe 12px, desfoca 4px → 0, 700ms, escalonado 70ms */
+  @keyframes subir { from { opacity: 0; transform: translateY(12px); filter: blur(4px); } to { opacity: 1; transform: none; filter: none; } }
+  .abertura__momento--primeiro .linha, .abertura__momento--primeiro .abertura__lead, .abertura__momento--primeiro .btn-row { animation: subir 700ms var(--ease-out) both; }
+  .abertura__momento--primeiro .linha:nth-child(2) { animation-delay: 70ms; }
+  .abertura__momento--primeiro .abertura__lead { animation-delay: 160ms; }
+  .abertura__momento--primeiro .btn-row { animation-delay: 230ms; }
+  @media (max-width: 760px) { main > section.abertura { height: 240vh !important; } .abertura__dica { display: none; } .abertura__momento { right: 0; } }
+  @media (prefers-reduced-motion: reduce) {
+    main > section.abertura { height: 100svh; }
+    .abertura__momento, .abertura__momento--primeiro * { transition: none; animation: none !important; }
+    .abertura__dica { display: none; }
+  }
+
+  /* ── Áreas: índice tipográfico em três colunas, sem foto e sem cartões ── */
+  .indice { list-style: none; margin: var(--s-8) 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: var(--gutter); }
+  .indice li { border-top: 1px solid var(--line); padding: var(--s-5) 0 var(--s-6); }
+  .indice h3 { font-family: var(--font-display); font-weight: 400; font-size: clamp(26px, 2.2vw, 32px); letter-spacing: -0.015em; line-height: 1.15; margin: 0 0 var(--s-3); }
+  .indice p { margin: 0; color: var(--muted); max-width: 32ch; }
+  @media (max-width: 1023px) { .indice { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 639px) { .indice { grid-template-columns: 1fr; } .indice li { padding-bottom: var(--s-5); } }
+
+  /* ── Atendimento (pinned-chapters): a régua do passo ativo fica fina ── */
+  [data-moment="pinned-chapters"] .mo-pc__step { border-left-width: 1px; }
+  main > section#atendimento[data-moment="pinned-chapters"].is-live > .mo-pc__grid { align-content: start; padding-top: calc(var(--nav, 72px) + 16px); }
+
+  /* ── Consulta processual: o momento "documento" da página ── */
+  .consulta-form { display: flex; gap: var(--s-3); align-items: flex-end; margin-top: var(--s-6); }
+  .consulta-form .field { flex: 1; margin: 0; }
+  .consulta-form input { font-size: 18px; letter-spacing: 0.02em; font-variant-numeric: tabular-nums; }
+  .consulta-nota { margin-top: var(--s-5); font-size: var(--t-small); color: var(--muted); max-width: 52ch; }
+  .processo { margin: 0; padding: var(--s-6) var(--s-6) var(--s-5); background: #fffdf9; border: 1px solid var(--line); border-radius: var(--r-md); box-shadow: 0 1px 0 var(--line), 0 18px 40px -28px rgb(43 26 34 / 0.35); }
+  .processo__head { padding-bottom: var(--s-4); border-bottom: 1px solid var(--line); margin-bottom: var(--s-2); }
+  .processo__tag { display: inline-block; font-size: var(--t-label); font-weight: 500; color: var(--accent); margin: 0 0 var(--s-2); }
+  .processo__meta { font-size: var(--t-small); color: var(--muted); margin: 0; }
+  .processo__head h3 { margin: var(--s-2) 0 0; font-size: clamp(22px, 1.8vw, 26px); }
+  .processo .rows li { align-items: baseline; }
+  .processo .rows time { color: var(--muted); white-space: nowrap; }
+  .processo.is-apagado { opacity: 0.35; }
+  .processo__mais { margin-top: var(--s-5); }
+  .rows .rows__name small { display: block; font-weight: 400; color: var(--muted); font-size: var(--t-body); line-height: 1.5; margin-top: var(--s-1); }
+  @media (max-width: 1023px) { .processo { margin-top: var(--s-7); } }
+  @media (max-width: 639px) { .consulta-form { flex-direction: column; align-items: stretch; } .processo { padding: var(--s-5); } }
+
+  /* ── Escritório: a fachada larga, depois a equipe ── */
+  .fachada { margin: var(--s-8) 0 0; border-radius: var(--r-lg); overflow: hidden; aspect-ratio: 21 / 9; }
+  .fachada img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 55%; display: block; }
+  .equipe { list-style: none; margin: var(--s-8) 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: var(--gutter); row-gap: var(--s-7); }
+  .equipe li { display: grid; grid-template-columns: 64px 1fr; column-gap: var(--s-5); align-items: start; }
+  .mono { width: 64px; height: 64px; border-radius: 50%; display: grid; place-items: center; border: 1px solid color-mix(in srgb, var(--p-inv-ink) 40%, transparent); font: 400 24px/1 var(--font-display); letter-spacing: 0.04em; }
+  .equipe h3 { font-family: var(--font-display); font-weight: 400; font-size: 26px; margin: 4px 0 var(--s-2); }
+  .equipe p { margin: 0; color: var(--muted); }
+  .equipe .oab { color: var(--ink); font-size: var(--t-small); margin-top: var(--s-3); }
+  .modelo { border-bottom: 1px dotted currentColor; }
+  @media (max-width: 1023px) { .equipe { grid-template-columns: 1fr 1fr; } .fachada { aspect-ratio: 16 / 9; } }
+  @media (max-width: 639px) { .equipe { grid-template-columns: 1fr; } .fachada { aspect-ratio: 4 / 3; } }
+
+  /* ── Contato: uma coluna ── */
+  .contato { max-width: 44rem; }
+  .contato__canais { display: flex; flex-wrap: wrap; gap: var(--s-2) var(--s-6); margin: var(--s-5) 0 0; padding: 0; list-style: none; }
+  .contato .form { margin-top: var(--s-7); grid-template-columns: 1fr 1fr; }
+  .form .field:has(textarea), .form .field--inteiro { grid-column: 1 / -1; }
+  @media (max-width: 639px) { .contato .form { grid-template-columns: 1fr; } }
+
+  /* ── Fechamento: botão normal, na cor da ação ── */
+  .closing__cta.close--simples { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--s-5) var(--s-7); align-items: end; text-align: left; justify-items: start; }
+  .closing__cta.close--simples > .section-head { margin: 0; grid-column: 1; justify-self: start; text-align: left; }
+  .closing__cta.close--simples > .btn { grid-column: 2; }
+  @media (max-width: 639px) { .closing__cta.close--simples { grid-template-columns: 1fr; } .closing__cta.close--simples > .btn { grid-column: 1; } }
+</style>
+</head>
+<body>
+<!-- type: service (escritório de advocacia; modelo revendável, escritório fictício de demonstração)
+     base: design-taste-frontend (paleta da marca via start.mjs brand, source-serif, botões solid, rodapé footer-dark)
+     revisão: /impeccable critique 2026-11-08 → layout do impeccable (seções do tamanho do conteúdo, composições variadas),
+     imagens geradas com o site-cinematografico (luz do dia), moment pinned-chapters em #atendimento -->
+<header class="nav">
+  <div class="wrap nav__bar">
+    <a class="skip-link" href="#top">Pular para o conteúdo</a>
+    <a class="nav__logo" href="#top"><svg class="brasao" viewBox="0 0 64 72" aria-hidden="true"><path d="M32 4 58 12v22c0 18-12 29-26 34C18 63 6 52 6 34V12Z" fill="none" stroke="currentColor" stroke-width="4"/><path d="M22 26l10 22 10-22" fill="none" stroke="currentColor" stroke-width="3.5"/></svg>Vieira Lacerda</a>
+    <nav class="nav__links" aria-label="Principal">
+      <div class="nav__item"><a class="nav__link" href="#processo">Processos</a></div>
+      <div class="nav__item"><a class="nav__link" href="#areas">Áreas</a></div>
+      <div class="nav__item"><a class="nav__link" href="#atendimento">Atendimento</a></div>
+      <div class="nav__item"><a class="nav__link" href="#escritorio">Escritório</a></div>
+    </nav>
+    <div class="nav__actions">
+      <a class="btn btn--primary" href="#contato">Pedir atendimento</a>
+    </div>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-label="Menu">
+      <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 5h14M2 13h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+  <!-- abertura: o vídeo da biblioteca anda com a rolagem (abertura.js); no fim dissolve no papel -->
+  <section class="abertura" id="inicio" aria-labelledby="hero-h">
+    <div class="abertura__palco">
+      <canvas class="abertura__canvas" aria-hidden="true"></canvas>
+      <div class="abertura__sombra" aria-hidden="true"></div>
+      <div class="wrap abertura__texto">
+        <div class="abertura__momento abertura__momento--primeiro is-on" data-de="0" data-ate="0.42">
+          <h1 id="hero-h"><span class="linha">Advogados no Centro</span> <span class="linha">de Sorocaba</span></h1>
+          <p class="abertura__lead">Família, trabalho, contratos, consumidor, previdência e empresas. Quem atende você na primeira conversa é quem cuida do caso até o fim.</p>
+          <div class="btn-row"><a class="btn btn--primary" href="#contato">Pedir atendimento<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a><a class="btn btn--secondary" href="#processo">Consultar processo</a></div>
+        </div>
+        <div class="abertura__momento" data-de="0.46" data-ate="0.84" aria-hidden="true">
+          <p class="abertura__frase">Cada caso é lido com atenção, e você acompanha cada etapa com quem cuida dele.</p>
+        </div>
+      </div>
+      <div class="abertura__dica" aria-hidden="true"><span></span>role</div>
+      <div class="abertura__papel" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <section class="section" id="processo" aria-labelledby="processo-h">
+    <div class="wrap grid grid--top">
+      <div class="span-5">
+        <div class="section-head">
+          <h2 id="processo-h">Consulte o seu processo</h2>
+          <p>Digite o número e veja as últimas movimentações registradas no CNJ, cada uma explicada em uma frase.</p>
+        </div>
+        <form class="consulta-form" action="/api/processo" method="get" novalidate>
+          <div class="field">
+            <label for="f-processo">Número do processo</label>
+            <input id="f-processo" name="numero" type="text" inputmode="numeric" autocomplete="off" maxlength="25" placeholder="0000000-00.0000.0.00.0000" required aria-describedby="f-processo-err">
+            <p class="field__error" id="f-processo-err" hidden>Escreva os 20 números do processo.</p>
+          </div>
+          <button class="btn btn--secondary" type="submit">Consultar</button>
+        </form>
+        <p class="form__status consulta-status" role="status" aria-live="polite"></p>
+        <p class="consulta-nota">Dados públicos do DataJud (CNJ), que pode levar alguns dias para mostrar as últimas movimentações. Processos em segredo de justiça não aparecem. Para saber o que cada etapa muda no seu caso, fale com o escritório.</p>
+      </div>
+      <div class="span-6 start-7">
+        <article class="ui ui-processo processo" data-processo aria-live="polite">
+          <div class="processo__head">
+            <p class="processo__tag">Exemplo · processo público usado na documentação do CNJ</p>
+            <p class="processo__meta">TRF1 · Juizado Especial · Tefé/AM</p>
+            <h3>Procedimento do Juizado Especial Cível</h3>
+          </div>
+          <ul class="rows">
+            <li><span class="rows__name">Ato ordinatório<small>O cartório fez um ato de rotina para o processo seguir.</small></span><time class="rows__value" datetime="2024-07-03">3 jul. 2024</time></li>
+            <li><span class="rows__name">Arquivamento definitivo<small>O processo foi arquivado de vez.</small></span><time class="rows__value" datetime="2020-11-12">12 nov. 2020</time></li>
+            <li><span class="rows__name">Documento juntado<small>Um documento entrou no processo.</small></span><time class="rows__value" datetime="2020-11-12">12 nov. 2020</time></li>
+            <li><span class="rows__name">Decurso de prazo<small>Terminou um prazo que corria no processo.</small></span><time class="rows__value" datetime="2020-11-06">6 nov. 2020</time></li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="areas" aria-labelledby="areas-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="areas-h">Áreas de atuação</h2>
+        <p>Cada caso fica com o advogado da área, que acompanha o processo do primeiro contato à decisão.</p>
+      </div>
+      <ul class="indice">
+        <li><h3>Família e sucessões</h3><p>Divórcio, guarda, pensão, inventário e testamento.</p></li>
+        <li><h3>Trabalho</h3><p>Contratos, rescisões e reclamações trabalhistas, para empregados e empresas.</p></li>
+        <li><h3>Civil e contratos</h3><p>Contratos, imóveis, cobranças e indenizações.</p></li>
+        <li><h3>Consumidor</h3><p>Bancos, planos de saúde, compras e cobranças indevidas.</p></li>
+        <li><h3>Previdenciário</h3><p>Aposentadoria, auxílio-doença, BPC e revisões no INSS.</p></li>
+        <li><h3>Empresarial</h3><p>Abertura de empresa, sociedade e contratos do dia a dia.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- pinned-chapters: a seção fica parada por duas telas enquanto os três passos abrem um a um -->
+  <section class="section" id="atendimento" style="--h: 2" data-moment="pinned-chapters" aria-labelledby="atendimento-h">
+    <div class="wrap mo-pc__grid">
+      <div class="mo-pc__text">
+        <h2 id="atendimento-h">Como funciona o atendimento</h2>
+        <ol class="mo-pc__steps">
+          <li class="mo-pc__step">
+            <h3>Marque a primeira conversa</h3>
+            <p>Você escreve pelo formulário ou pelo WhatsApp e combinamos dia e hora, no escritório ou por vídeo.</p>
+            <figure class="mo-pc__visual"><img src="assets/img/video-1080.webp" srcset="assets/img/video-640.webp 640w, assets/img/video-1080.webp 1080w, assets/img/video-1600.webp 1600w" sizes="(max-width: 1023px) 100vw, 640px" alt="Notebook aberto numa chamada de vídeo, ao lado de uma agenda vinho e uma xícara de café" width="2400" height="1792" data-source="commissioned" data-subject="video"></figure>
+          </li>
+          <li class="mo-pc__step">
+            <h3>Receba o estudo do caso</h3>
+            <p>Lemos os seus documentos e explicamos por escrito os caminhos possíveis, os prazos e os riscos de cada um.</p>
+            <figure class="mo-pc__visual"><img src="assets/img/documento-1080.webp" srcset="assets/img/documento-640.webp 640w, assets/img/documento-1080.webp 1080w, assets/img/documento-1600.webp 1600w" sizes="(max-width: 1023px) 100vw, 640px" alt="Mãos marcando um documento impresso com marca-texto amarelo, numa mesa clara" width="2400" height="1792" data-source="commissioned" data-subject="documento"></figure>
+          </li>
+          <li class="mo-pc__step">
+            <h3>Acompanhe cada etapa</h3>
+            <p>Quando o processo anda, você recebe a notícia e o que ela muda no seu caso, direto do advogado responsável.</p>
+            <figure class="mo-pc__visual"><img src="assets/img/celular-1080.webp" srcset="assets/img/celular-640.webp 640w, assets/img/celular-1080.webp 1080w, assets/img/celular-1600.webp 1600w" sizes="(max-width: 1023px) 100vw, 640px" alt="Celular sobre a mesa com uma notificação, ao lado de um envelope e uma caneta vinho" width="2400" height="1792" data-source="commissioned" data-subject="celular"></figure>
+          </li>
+        </ol>
+      </div>
+      <div class="mo-pc__visuals frame"></div>
+    </div>
+  </section>
+
+
+  <section class="section ground-inverse" id="escritorio" aria-labelledby="escritorio-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="escritorio-h">O escritório e a equipe</h2>
+        <p>Sociedade de advogados no Centro de Sorocaba. Três advogados, cada um responsável pelas próprias áreas, com atendimento no escritório ou por vídeo.</p>
+      </div>
+      <figure class="fachada">
+        <!-- imagem gerada; troque pela foto da fachada ou da entrada do escritório -->
+        <img src="assets/img/fachada-1600.webp" srcset="assets/img/fachada-640.webp 640w, assets/img/fachada-1080.webp 1080w, assets/img/fachada-1600.webp 1600w" sizes="(max-width: 1360px) 100vw, 1280px" width="2528" height="1696" alt="Fachada de sobrado antigo com porta dupla de madeira pintada de vinho e sacada de ferro, numa rua de pedras portuguesas" loading="lazy" decoding="async" data-source="commissioned" data-subject="fachada">
+      </figure>
+      <ul class="equipe">
+        <li><span class="mono" aria-hidden="true">HV</span><div><h3>Helena Vieira</h3><p>Família e sucessões, civil e contratos.</p><p class="oab"><span class="modelo">OAB/SP nº 000.000</span></p></div></li>
+        <li><span class="mono" aria-hidden="true">RL</span><div><h3>Rafael Lacerda</h3><p>Trabalho e previdenciário.</p><p class="oab"><span class="modelo">OAB/SP nº 000.000</span></p></div></li>
+        <li><span class="mono" aria-hidden="true">MT</span><div><h3>Marina Toledo</h3><p>Consumidor e empresarial.</p><p class="oab"><span class="modelo">OAB/SP nº 000.000</span></p></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--contact" id="contato" aria-labelledby="contato-h">
+    <div class="wrap">
+      <div class="contato">
+        <div class="section-head">
+          <h2 id="contato-h">Pedir atendimento</h2>
+          <p>Conte em poucas linhas o que aconteceu. Respondemos por e-mail ou telefone para marcar a conversa.</p>
+        </div>
+        <ul class="contato__canais">
+          <li>Centro, Sorocaba · segunda a sexta, 9h às 18h · <a class="link" href="https://www.openstreetmap.org/search?query=Centro%20Sorocaba">Ver no mapa</a></li>
+          <li><a class="link" href="https://wa.me/5515991040846?text=Ol%C3%A1!%20Gostaria%20de%20pedir%20um%20atendimento." target="_blank" rel="noopener">WhatsApp (15) 99104-0846</a></li>
+        </ul>
+        <form class="form" action="https://formsubmit.co/eduardotorres.nexus@gmail.com" method="post" data-endpoint="https://formsubmit.co/ajax/eduardotorres.nexus@gmail.com" data-sent="Pedido enviado. Respondemos por e-mail ou telefone para marcar a conversa." data-sending="Enviando…" data-fix="Confira os campos destacados ({n})." data-failed="Não foi enviado: a conexão falhou. O que você escreveu continua aqui; tente de novo ou chame no WhatsApp." novalidate>
+          <input type="hidden" name="_subject" value="Pedido de atendimento pelo site">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" hidden>
+          <div class="field"><label for="f-nome">Nome</label>
+            <input id="f-nome" name="nome" type="text" autocomplete="name" required aria-describedby="f-nome-err">
+            <p class="field__error" id="f-nome-err" hidden>Escreva o seu nome.</p></div>
+          <div class="field"><label for="f-tel">Telefone ou WhatsApp</label>
+            <input id="f-tel" name="telefone" type="tel" autocomplete="tel" inputmode="tel" required aria-describedby="f-tel-err">
+            <p class="field__error" id="f-tel-err" hidden>Escreva um telefone com DDD.</p></div>
+          <div class="field"><label for="f-email">E-mail</label>
+            <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="f-email-err">
+            <p class="field__error" id="f-email-err" hidden>Escreva um e-mail com @, como nome@exemplo.com.</p></div>
+          <div class="field"><label for="f-assunto">Assunto</label>
+            <select id="f-assunto" name="area">
+              <option value="">Ainda não sei</option>
+              <option>Família e sucessões</option><option>Trabalho</option><option>Civil e contratos</option>
+              <option>Consumidor</option><option>Previdenciário</option><option>Empresarial</option>
+            </select></div>
+          <div class="field"><label for="f-msg">O que aconteceu</label>
+            <textarea id="f-msg" name="mensagem" rows="5" required aria-describedby="f-msg-err"></textarea>
+            <p class="field__error" id="f-msg-err" hidden>Conte em poucas linhas o que aconteceu.</p></div>
+          <div class="btn-row field--inteiro"><button class="btn btn--primary" type="submit">Pedir atendimento</button></div>
+          <p class="form__status field--inteiro" role="status" data-form-status></p>
+          <p class="t-small field--inteiro">Seus dados servem só para responder a este pedido.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer closing footer--dark ground-inverse" id="contact" aria-labelledby="close-h">
+  <div class="wrap">
+    <div class="closing__cta close--simples">
+      <div class="section-head">
+        <h2 id="close-h">Fale com o escritório</h2>
+        <p>No Centro de Sorocaba ou por vídeo, de segunda a sexta.</p>
+      </div>
+      <a class="btn btn--primary" href="#contato">Pedir atendimento<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+    </div>
+    <div class="closing__links">
+      <div class="grid">
+        <div class="span-4 stack-4">
+          <a class="nav__logo" href="#top"><svg class="brasao" viewBox="0 0 64 72" aria-hidden="true"><path d="M32 4 58 12v22c0 18-12 29-26 34C18 63 6 52 6 34V12Z" fill="none" stroke="currentColor" stroke-width="4"/><path d="M22 26l10 22 10-22" fill="none" stroke="currentColor" stroke-width="3.5"/></svg>Vieira Lacerda</a>
+          <p class="footer__lede">Vieira Lacerda Sociedade de Advogados · <span class="modelo">OAB/SP nº 00.000</span></p>
+        </div>
+        <div class="span-2 footer__col"><h3>Escritório</h3><ul><li><a href="#areas">Áreas de atuação</a></li><li><a href="#escritorio">Equipe</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>Clientes</h3><ul><li><a href="#atendimento">Atendimento</a></li><li><a href="#processo">Consulta processual</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>Endereço</h3><ul><li>Centro, Sorocaba/SP</li><li>Seg. a sex., 9h às 18h</li></ul></div>
+        <div class="span-2 footer__col"><h3>Contato</h3><ul><li><a href="#contato">Pedir atendimento</a></li><li><a href="https://wa.me/5515991040846" target="_blank" rel="noopener">WhatsApp</a></li></ul></div>
+      </div>
+      <div class="footer__legal">
+        <span>&copy; 2026 Vieira Lacerda Advocacia · Conteúdo informativo, conforme o Provimento 205/2021 da OAB</span>
+        <span>Site de demonstração: escritório, advogados e registros fictícios</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<nav class="actionbar" aria-label="Ações rápidas">
+  <a class="btn btn--primary" href="#contato">Pedir atendimento</a>
+  <a class="btn btn--secondary" href="https://wa.me/5515991040846?text=Ol%C3%A1!%20Gostaria%20de%20pedir%20um%20atendimento." target="_blank" rel="noopener">WhatsApp</a>
+</nav>
+
+<script src="abertura.js" defer></script>
+<script src="consulta.js" defer></script>
+<script type="module" src="assets/system.js"></script>
+<script type="module" src="assets/motion/motion.js"></script>
+<script type="module" src="assets/layout/layout.js"></script>
+</body>
+</html>

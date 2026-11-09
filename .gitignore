@@ -1,0 +1,10 @@
+node_modules/
+.netlify/
+# originais e pastas de trabalho (não vão para o repositório)
+fonte/
+brief.json
+site-v1-cinematico/
+site-v2/
+site-v3/
+.taste-skill/
+.impeccable/
