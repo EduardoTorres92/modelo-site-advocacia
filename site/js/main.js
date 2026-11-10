@@ -311,7 +311,7 @@
   /* ── 5. Escritório ── */
   function trocaSocio(i) {
     const socios = $$(".socios li"), fotos = $$(".escritorio__fotos img"), legenda = $("[data-legenda]");
-    const LEGENDAS = ["O escritório · Centro, Sorocaba", "Sala de reunião · Atendimento presencial", "Atendimento por vídeo · De qualquer lugar"];
+    const LEGENDAS = ["Helena Vieira · Sócia · Família e civil", "Rafael Lacerda · Sócio · Trabalho e INSS", "Marina Toledo · Sócia · Consumidor e empresas"];
     socios.forEach((l, k) => l.classList.toggle("on", k === i));
     fotos.forEach((f, k) => f.classList.toggle("on", k === i));
     trocaTexto(legenda, LEGENDAS[i]);

@@ -309,7 +309,8 @@ input, select, textarea { caret-color: var(--texto); }
 .numeros b { font: 600 clamp(3rem, 5vw, 5.4rem)/.85 var(--sans); letter-spacing: -.05em; font-variant-numeric: tabular-nums; }
 @media (max-width: 900px) {
   .escritorio__grade { grid-template-columns: 1fr; }
-  .escritorio__fotos { aspect-ratio: 4 / 3.5; }
+  .escritorio__fotos { aspect-ratio: 4 / 4.4; }
+  .escritorio__fotos img { object-position: 50% 10%; }
   .escritorio__titulo { font-size: clamp(1.8rem, 8.1vw, 2.6rem); }
   .numeros { grid-template-columns: 1fr; }
   .numeros li + li { padding-left: 0; border-left: 0; }

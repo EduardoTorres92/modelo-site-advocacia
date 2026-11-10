@@ -36,7 +36,7 @@ Nada é guardado além do resultado público: a API não traz o nome das partes 
 
 HTML, CSS e JavaScript puro (sem build) · GSAP + ScrollTrigger e Lenis (em `site/vendor/`) · fontes locais (Fontsource) · Netlify Functions (Node.js) · Netlify Blobs · API pública DataJud/CNJ · formulário via FormSubmit
 
-Design: layout *Cláusula* do ProfitizeBuild, adaptado. Imagens e vídeo gerados com IA, tratados em P&B.
+Design: layout *Cláusula* do ProfitizeBuild, adaptado. Fotos, retratos e vídeo do pacote da template, gerados com IA: os retratos são de pessoas que não existem e precisam ser trocados pelas fotos dos advogados reais antes de publicar para um cliente.
 
 ## Estrutura
 
@@ -48,7 +48,7 @@ site/                     # o que é publicado
 ├── consulta.js           # consulta processual + "tradução" das movimentações
 ├── vendor/               # gsap, ScrollTrigger, lenis (versões travadas)
 ├── fonts/                # Inter Tight, IBM Plex Mono, Newsreader
-└── assets/               # fotos P&B (pb/) e vídeo do hero (video/)
+└── assets/               # fotos P&B (img/) e vídeo do hero (video/)
 netlify/
 ├── functions/processo.mjs             # /api/processo (rápida)
 ├── functions/processo-background.mjs  # busca lenta no CNJ, em segundo plano
