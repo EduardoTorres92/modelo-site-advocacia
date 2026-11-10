@@ -4,18 +4,23 @@ Site institucional **revendável** para escritórios de advocacia, com consulta 
 
 **▶ Ver ao vivo:** https://advocacia-modelo-eduardo.netlify.app
 
-| Abertura em vídeo | Consulta processual |
+| Abertura em vídeo | Núcleos presos à rolagem |
 |---|---|
-| ![](docs/1-abertura.jpg) | ![](docs/3-consulta.jpg) |
+| ![](docs/1-hero.jpg) | ![](docs/2-dossies.jpg) |
+| **Contrato revisado em vermelho** | **Consulta processual** |
+| ![](docs/3-minuta.jpg) | ![](docs/4-consulta.jpg) |
 | **Áreas de atuação** | **Escritório e equipe** |
-| ![](docs/4-areas.jpg) | ![](docs/6-escritorio.jpg) |
+| ![](docs/5-areas.jpg) | ![](docs/6-escritorio.jpg) |
 
 ## O que tem de diferente
 
-- **Abertura cinematográfica:** um vídeo de 8 s (gerado com IA) fatiado em 160 quadros e desenhado num `<canvas>` conforme a rolagem. A câmera atravessa uma biblioteca jurídica até a mesa; no fim, a imagem dissolve na cor da página.
+- **Layout Cláusula:** preto e branco com grão de filme animado, títulos em caixa alta (Inter Tight), rótulos em mono (IBM Plex Mono) que embaralham antes de assentar, e uma única cor no site inteiro: o vermelho de revisão, só na folha do contrato.
+- **Abertura em vídeo:** a biblioteca jurídica em loop de ida e volta (gerado com IA, em P&B), só no desktop; no celular e com movimento reduzido, a foto parada. Ao rolar, o hero escurece e estreita enquanto os núcleos entram, sem corte seco.
+- **Núcleos presos à rolagem:** os três núcleos do escritório (família e civil, trabalho e INSS, consumidor e empresas) trocam na mesma tela, com foto, título por máscara e tabela que embaralha.
+- **Como funciona o atendimento:** três etapas ao lado de um contrato de locação de exemplo, revisado em vermelho a cada marco da rolagem até as duas assinaturas se desenharem.
 - **Consulta processual com explicação em português:** o visitante digita o número do processo e vê as movimentações registradas no DataJud (CNJ), cada uma "traduzida" em uma frase ("Decurso de prazo" → *Terminou um prazo que corria no processo*).
 - **Feito dentro das regras da OAB (Provimento 205/2021):** informativo e sóbrio, sem promessa de resultado, preços, depoimentos ou superlativos; advogados identificados com o número da OAB.
-- **Revendável:** nome, cores, áreas, equipe e contatos ficam em pontos claros do código; os campos de exemplo (`OAB/SP nº 000.000`) aparecem marcados para troca.
+- **Revendável:** nome, áreas, equipe e contatos ficam no `site/index.html`; os campos de exemplo (`OAB/SP nº 000.000`) aparecem marcados para troca.
 
 ## Como a consulta processual funciona
 
@@ -29,18 +34,21 @@ Nada é guardado além do resultado público: a API não traz o nome das partes 
 
 ## Tecnologias
 
-HTML, CSS e JavaScript puro (sem build) · Netlify Functions (Node.js) · Netlify Blobs · API pública DataJud/CNJ · formulário via FormSubmit
+HTML, CSS e JavaScript puro (sem build) · GSAP + ScrollTrigger e Lenis (em `site/vendor/`) · fontes locais (Fontsource) · Netlify Functions (Node.js) · Netlify Blobs · API pública DataJud/CNJ · formulário via FormSubmit
 
-Design: sistema do [design-taste-frontend](site/assets/LICENSE-design-taste-frontend.txt) (MIT), revisão com *impeccable* e animação seguindo os princípios de Emil Kowalski. Imagens e vídeo gerados com IA.
+Design: layout *Cláusula* do ProfitizeBuild, adaptado. Fotos, retratos e vídeo do pacote da template, gerados com IA: os retratos são de pessoas que não existem e precisam ser trocados pelas fotos dos advogados reais antes de publicar para um cliente.
 
 ## Estrutura
 
 ```
 site/                     # o que é publicado
 ├── index.html
-├── abertura.js           # vídeo na rolagem (canvas)
+├── css/clausula.css      # tokens, seções e responsivo
+├── js/main.js            # movimento: grão, scramble, pins, minuta, cursor, nav, barra
 ├── consulta.js           # consulta processual + "tradução" das movimentações
-└── assets/               # kit de design, imagens e quadros do vídeo
+├── vendor/               # gsap, ScrollTrigger, lenis (versões travadas)
+├── fonts/                # Inter Tight, IBM Plex Mono, Newsreader
+└── assets/               # fotos P&B (img/) e vídeo do hero (video/)
 netlify/
 ├── functions/processo.mjs             # /api/processo (rápida)
 ├── functions/processo-background.mjs  # busca lenta no CNJ, em segundo plano
