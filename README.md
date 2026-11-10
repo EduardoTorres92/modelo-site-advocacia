@@ -2,7 +2,7 @@
 
 Site institucional **revendável** para escritórios de advocacia, com consulta de processos integrada à API pública do CNJ. A demonstração usa um escritório fictício, *Vieira Lacerda Advocacia* (Sorocaba/SP).
 
-**▶ Ver ao vivo:** https://advocacia-modelo-eduardo.netlify.app
+**▶ Ver ao vivo:** https://advocacia-modelo-eduardo.vercel.app
 
 | Abertura em vídeo | Núcleos presos à rolagem |
 |---|---|
@@ -34,7 +34,7 @@ Nada é guardado além do resultado público: a API não traz o nome das partes 
 
 ## Tecnologias
 
-HTML, CSS e JavaScript puro (sem build) · GSAP + ScrollTrigger e Lenis (em `site/vendor/`) · fontes locais (Fontsource) · Netlify Functions (Node.js) · Netlify Blobs · API pública DataJud/CNJ · formulário via FormSubmit
+HTML, CSS e JavaScript puro (sem build) · GSAP + ScrollTrigger e Lenis (em `site/vendor/`) · fontes locais (Fontsource) · Vercel Functions ou Netlify Functions + Blobs (Node.js) · API pública DataJud/CNJ · formulário via FormSubmit
 
 Design: layout *Cláusula* do ProfitizeBuild, adaptado. Fotos, retratos e vídeo do pacote da template, gerados com IA: os retratos são de pessoas que não existem e precisam ser trocados pelas fotos dos advogados reais antes de publicar para um cliente.
 
