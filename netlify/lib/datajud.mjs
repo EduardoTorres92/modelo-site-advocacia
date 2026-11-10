@@ -62,7 +62,8 @@ export async function buscar(digitos, tribunal, limite = 300000) {
     } catch (e) {
       ultimoErro = e.message;
       console.error(`DataJud, tentativa ${tentativa}:`, e.message);
-      await new Promise((ok) => setTimeout(ok, 2000));
+      // 429 (muitas consultas): espera mais antes de tentar de novo
+      await new Promise((ok) => setTimeout(ok, /429/.test(e.message) ? 6000 * tentativa : 2000));
     }
   }
   if (!dados) return { status: 502, erro: "A consulta pública do CNJ não respondeu agora. Tente de novo em alguns minutos.", detalhe: ultimoErro };
