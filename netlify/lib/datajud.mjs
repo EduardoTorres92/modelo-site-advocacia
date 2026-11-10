@@ -36,7 +36,8 @@ export const VALIDADE_MS = 15 * 60 * 1000;   // resultado fresco por 15 min
 export const PENDENTE_MS = 6 * 60 * 1000;    // uma busca "em andamento" vale por 6 min (até 4 tentativas)
 export const ERRO_MS = 20 * 1000;           // um erro do CNJ só fica guardado 20 s (a próxima consulta tenta de novo)
 
-export async function buscar(digitos, tribunal) {
+export async function buscar(digitos, tribunal, limite = 300000) {
+  // limite: tempo total da busca (Netlify em segundo plano: 5 min; Vercel: abaixo do maxDuration da função)
   // Busca exata no campo "keyword" (bem mais rápida que "match": ~30 s contra 50–60 s em nov/2026).
   // Se não achar, tenta o "match" uma vez. Roda na função em segundo plano (limite de 15 min).
   const inicio = Date.now();
@@ -54,7 +55,7 @@ export async function buscar(digitos, tribunal) {
   // responde em ~45 s. Por isso: até 4 tentativas, dentro de 5 minutos.
   let dados = null, ultimoErro = "";
   for (let tentativa = 1; tentativa <= 4 && !dados; tentativa++) {
-    const resta = 300000 - (Date.now() - inicio);
+    const resta = limite - (Date.now() - inicio);
     if (resta < 20000) break;
     try {
       dados = await consulta({ term: { "numeroProcesso.keyword": digitos } }, Math.min(90000, resta));
@@ -65,8 +66,8 @@ export async function buscar(digitos, tribunal) {
     }
   }
   if (!dados) return { status: 502, erro: "A consulta pública do CNJ não respondeu agora. Tente de novo em alguns minutos.", detalhe: ultimoErro };
-  if (!(dados.hits?.hits || []).length && 300000 - (Date.now() - inicio) > 30000) {
-    try { dados = await consulta({ match: { numeroProcesso: digitos } }, Math.min(90000, 300000 - (Date.now() - inicio))); } catch (e) { console.error("DataJud (match):", e.message); }
+  if (!(dados.hits?.hits || []).length && limite - (Date.now() - inicio) > 30000) {
+    try { dados = await consulta({ match: { numeroProcesso: digitos } }, Math.min(90000, limite - (Date.now() - inicio))); } catch (e) { console.error("DataJud (match):", e.message); }
   }
 
   const registros = (dados.hits?.hits || [])

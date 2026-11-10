@@ -57,6 +57,10 @@ netlify/
 
 Rodar localmente: `npm install && npx netlify-cli dev`
 
+### Na Vercel
+
+O mesmo repositório também sobe na Vercel (`vercel.json`): publica a pasta `site/` sem build e a consulta roda em `api/processo.mjs`, que usa a mesma biblioteca (`netlify/lib/datajud.mjs`). Lá a função pode durar até 300 s, então a busca acontece na própria requisição; resultados bons ficam 15 min no cache da CDN.
+
 ---
 
 Feito por **Eduardo Torres**: crio sites para negócios locais. Quer um assim? [Me chame no LinkedIn](https://www.linkedin.com/in/eduardo-torres-769aa963/).
