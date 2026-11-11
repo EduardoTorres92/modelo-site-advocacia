@@ -32,6 +32,10 @@ A API pública do CNJ leva de 25 s a 1 min por consulta, e às vezes falha. Uma 
 
 Nada é guardado além do resultado público: a API não traz o nome das partes e processos com sigilo são escondidos.
 
+## Hospedar em Node.js (Hostinger ou qualquer servidor)
+
+`server.mjs` entrega a pasta `site/` e a rota `/api/processo`, com a mesma biblioteca do DataJud. A busca roda em segundo plano no próprio processo e a página pergunta de novo até o resultado chegar, como na Netlify. Para rodar: `npm start` (porta em `PORT`, padrão 3000).
+
 ## Tecnologias
 
 HTML, CSS e JavaScript puro (sem build) · GSAP + ScrollTrigger e Lenis (em `site/vendor/`) · fontes locais (Fontsource) · Vercel Functions ou Netlify Functions + Blobs (Node.js) · API pública DataJud/CNJ · formulário via FormSubmit
